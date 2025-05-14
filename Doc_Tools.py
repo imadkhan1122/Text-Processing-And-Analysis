@@ -22,8 +22,8 @@ class DocTools():
         Read a file and create list of paragraphs
         :param file_name: name of file in the project (or full path to the file)
         """
-        reader = open(self.pth, 'r')
-        return [line.rstrip() for line in reader]
+        with open(self.pth, 'r') as reader:
+            return [line.rstrip() for line in reader]
 
     def word_count(self):
         
